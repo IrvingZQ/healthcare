@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommonActivity.TipOffActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tip_off_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tip_off_iv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:padding="10dp"
+            android:src="@mipmap/cancel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="举报"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tip_off_tv_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tip_off_top_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        android:text="举报某某的帖子："/>
+
+    <TextView
+        android:id="@+id/tip_off_tv_sticker_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tip_off_tv_nick_name"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:lines="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:ellipsize="end"
+        android:background="#DCD8D8"/>
+
+    <TextView
+        android:id="@+id/hint_tip_off_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tip_off_tv_sticker_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:text="请说明你举报的原因："/>
+
+    <EditText
+        android:id="@+id/tip_off_et_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hint_tip_off_reason"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="top"
+        android:layout_margin="5dp"
+        android:lines="5"
+        android:background="#DCD8D8"/>
+
+    <Button
+        android:id="@+id/tip_off_btn_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tip_off_et_reason"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:background="#FF9800"
+        android:text="提交"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

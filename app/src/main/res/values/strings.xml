@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">健康医疗App</string>
+    <string name="back_symbol"><![CDATA[<]]></string>
+    <string name="notification">温馨提示：
+                                1.线上挂号支持自费、医保、公费病人
+                                2.如需取消预约，请在就诊前一天取消预约。如果没有取消预约且没有就诊则挂号费不能退回。</string>
+</resources>

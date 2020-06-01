@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:padding="10dp"
+    android:background="@drawable/round_corner"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/hint_item_patient_appointment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        android:text="就诊时间："/>
+
+    <TextView
+        android:id="@+id/item_tv_patient_appointment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_item_patient_appointment_date"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:text="2020-4-20 22:00"/>
+
+    <TextView
+    android:id="@+id/hint_tv_patient_appointment_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/hint_item_patient_appointment_date"
+    app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+    android:text="就诊人："/>
+
+    <TextView
+        android:id="@+id/item_tv_patient_appointment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_tv_patient_appointment_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:text="张某"/>
+
+    <TextView
+        android:id="@+id/hint_tv_patient_appointment_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hint_tv_patient_appointment_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        android:text="身份证号："/>
+
+    <TextView
+        android:id="@+id/item_tv_patient_appointment_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_tv_patient_appointment_id"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:text="440823908503580"/>
+
+    <TextView
+        android:id="@+id/hint_tv_patient_appointment_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_patient_appointment_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        android:text="医院："/>
+
+    <TextView
+        android:id="@+id/item_tv_patient_appointment_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_tv_patient_appointment_hospital"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:text="广东省中医院大学城医院"/>
+
+    <TextView
+        android:id="@+id/hint_tv_patient_appointment_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_patient_appointment_hospital"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="5dp"
+        android:text="科室："/>
+
+    <TextView
+        android:id="@+id/item_tv_patient_appointment_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_tv_patient_appointment_department"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:text="骨科"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

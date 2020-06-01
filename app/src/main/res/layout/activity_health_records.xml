@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientActivity.HealthRecordsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/health_records_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/health_record_tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="10dp"
+            android:text="返回"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="健康档案"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/health_record_tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="更新档案"
+            android:textSize="15sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/health_records_top_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/text"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/health_records_top_bar"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/hint_health_records_habit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:padding="20sp"
+                android:text="生活习惯"/>
+
+            <TextView
+                android:id="@+id/health_records_tv_habit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hint_health_records_habit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="#EFEDED"
+                android:text="这里记录个人生活习惯"/>
+
+            <TextView
+                android:id="@+id/hint_health_records_family_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/health_records_tv_habit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:padding="20sp"
+                android:text="家族病史"/>
+            <TextView
+                android:id="@+id/health_records_tv_family_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hint_health_records_family_history"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="#EFEDED"
+                android:text="这里记录患者家族病史"/>
+
+            <TextView
+                android:id="@+id/hint_health_records_illness_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/health_records_tv_family_history"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:padding="20sp"
+                android:text="患病史"/>
+
+            <TextView
+                android:id="@+id/health_records_tv_illness_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/hint_health_records_illness_history"
+                android:background="#EFEDED"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="这里记录患者的生病就诊信息"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

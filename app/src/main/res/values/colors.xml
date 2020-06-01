@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">@color/design_default_color_on_secondary</color>
+    <color name="colorAccent">@android:color/holo_blue_bright</color>
+    <color name="white">#ffffff</color>
+    <color name="bottomBar">#CFCCCB</color>
+    <color name="selectedLine">#48A1E7</color>
+</resources>

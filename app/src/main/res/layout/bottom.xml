@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/bottomBar"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/selected_line"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/selectedLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/bt_home"
+            android:layout_weight="1"
+            style="@style/Btn_pressed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="首页" />
+
+        <Button
+            android:id="@+id/bt_message"
+            style="@style/Btn_common"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="消息" />
+
+        <Button
+            android:id="@+id/bt_community"
+            style="@style/Btn_common"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="社区" />
+
+        <Button
+            android:id="@+id/bt_personal_center"
+            style="@style/Btn_common"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="个人" />
+    </LinearLayout>
+</LinearLayout>

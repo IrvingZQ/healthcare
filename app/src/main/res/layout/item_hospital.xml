@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/hospital_tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="广东省中医院大学城医院"/>
+
+    <TextView
+        android:id="@+id/hospital_tv_item_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/hospital_tv_item_name"
+        app:layout_constraintBaseline_toBaselineOf="@id/hospital_tv_item_name"
+        android:background="#80FF4444"
+        android:text="三甲医院"
+        android:textSize="10sp"
+        android:textColor="@color/design_default_color_error"/>
+
+    <TextView
+        android:id="@+id/hint_tv_hospital_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hospital_tv_item_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:text="地址："/>
+
+    <TextView
+        android:id="@+id/hospital_tv_item_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_tv_hospital_location"
+        app:layout_constraintLeft_toRightOf="@id/hint_tv_hospital_location"
+        android:text="广州大学城"/>
+
+    <TextView
+        android:id="@+id/hint_tv_hospital_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hint_tv_hospital_location"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:text="电话："/>
+    <TextView
+        android:id="@+id/hospital_tv_item_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/hint_tv_hospital_phone"
+        app:layout_constraintLeft_toRightOf="@id/hint_tv_hospital_phone"
+        android:text="020-8888888"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

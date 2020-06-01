@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommonActivity.ShowStickerDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sticker_detail_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="返回"
+            app:layout_constraintBaseline_toBaselineOf="@id/sticker_detail_tv_top_title"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="帖子内容"
+            android:textSize="15sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/sticker_detail_top_bar"
+        android:background="@color/selectedLine" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sticker_detail_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/sticker_detail_top_bar">
+
+        <com.zhengzhiqiang.healthmanagement.CustomView.RoundImageView
+            android:id="@+id/sticker_detail_riv_head_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_publisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintTop_toTopOf="@id/sticker_detail_riv_head_image"
+            app:layout_constraintBottom_toTopOf="@id/sticker_detail_tv_date"
+            app:layout_constraintLeft_toRightOf="@id/sticker_detail_riv_head_image"
+            android:text="昵称" />
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintTop_toBottomOf="@id/sticker_detail_tv_publisher"
+            app:layout_constraintBottom_toBottomOf="@id/sticker_detail_riv_head_image"
+            app:layout_constraintLeft_toRightOf="@id/sticker_detail_riv_head_image"
+            android:text="发布于" />
+
+        <ImageView
+            android:id="@+id/sticker_detail_iv_thumb_up"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@id/sticker_detail_riv_head_image"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@mipmap/thumb_up_false" />
+
+        <ImageView
+            android:id="@+id/sticker_detail_iv_tip_off"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@+id/sticker_detail_tv_date"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@mipmap/tip_off" />
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/sticker_detail_riv_head_image"
+            android:text="这是帖子内容正文" />
+
+        <ImageView
+            android:id="@+id/sticker_detail_iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="3:2"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/sticker_detail_tv_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sticker_area_comments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/sticker_detail_area"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/sticker_detail_icon_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/comment"/>
+        <TextView
+            android:id="@+id/sticker_detail_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/sticker_detail_icon_comment"
+            android:layout_marginLeft="5dp"
+            android:text="0"/>
+
+        <ImageView
+            android:id="@+id/sticker_detail_icon_thumb_up"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            app:layout_constraintLeft_toRightOf="@id/sticker_detail_comments_count"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/thumb_up_false"/>
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_thumb_up_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toRightOf="@id/sticker_detail_icon_thumb_up"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/sticker_detail_tv_to_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/sticker_detail_comments_count"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="我要评论"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/sticker_detail_comments_count"
+            android:background="@color/selectedLine"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_sticker_comments"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sticker_detail_comments_count"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="-24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

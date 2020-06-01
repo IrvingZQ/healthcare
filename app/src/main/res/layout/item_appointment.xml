@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/round_corner"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/appointment_tv_hint_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="挂号诊疗费" />
+
+    <TextView
+        android:id="@+id/appointment_tv_item_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="20元" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_fee"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#40BDBD" />
+
+    <TextView
+        android:id="@+id/appointment_tv_hint_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_fee"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="医院" />
+
+    <TextView
+        android:id="@+id/appointment_tv_item_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appointment_tv_hint_hospital"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="广中医" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_hospital"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#40BDBD" />
+
+    <TextView
+        android:id="@+id/appointment_tv_hint_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_hospital"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="科室" />
+
+    <TextView
+        android:id="@+id/appointment_tv_item_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appointment_tv_hint_department"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="内科" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_department"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#40BDBD" />
+
+    <TextView
+        android:id="@+id/appointment_tv_hint_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_department"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="医生" />
+
+    <TextView
+        android:id="@+id/appointment_tv_item_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appointment_tv_hint_doctor"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="张三" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_doctor"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#40BDBD" />
+
+    <TextView
+        android:id="@+id/appointment_tv_hint_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_doctor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="时间" />
+
+    <TextView
+        android:id="@+id/appointment_tv_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appointment_tv_hint_date"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="2020-04-10 14：00-14:30" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_date"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#40BDBD" />
+
+    <TextView
+        android:id="@+id/appointment_tv_hint_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appointment_tv_hint_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="就诊人" />
+
+    <TextView
+        android:id="@+id/appointment_tv_item_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/appointment_tv_hint_patient"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="张*阳" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:imagecontrol="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:id="@+id/doctor_iv_head_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doctor_personal_tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="编辑"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <com.zhengzhiqiang.healthmanagement.CustomView.RoundImageView
+            android:id="@+id/doctor_riv_head_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:layout_constraintLeft_toLeftOf="@id/doctor_iv_head_background"
+            app:layout_constraintRight_toRightOf="@id/doctor_iv_head_background"
+            app:layout_constraintTop_toTopOf="@id/doctor_iv_head_background"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_iv_head_background"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.4"
+            imagecontrol:border_inside_color="#bc0978"
+            imagecontrol:border_outside_color="#ba3456"
+            imagecontrol:border_thickness="1dp"
+            android:src="@drawable/head_image"/>
+
+        <TextView
+            android:id="@+id/doctor_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/doctor_riv_head_image"
+            app:layout_constraintTop_toTopOf="@id/doctor_iv_head_background"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_iv_head_background"
+            app:layout_constraintVertical_bias="0.35"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/doctor_tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/doctor_tv_name"
+            app:layout_constraintTop_toBottomOf="@id/doctor_tv_name"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:text="账号" />
+
+        <TextView
+            android:id="@+id/doctor_tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/doctor_tv_age"
+            app:layout_constraintTop_toBottomOf="@id/doctor_riv_head_image"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:textSize="16sp"
+            android:text="性别:不详" />
+
+        <TextView
+            android:id="@+id/doctor_tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/doctor_tv_gender"
+            app:layout_constraintRight_toLeftOf="@id/doctor_tv_area"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_gender"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_gender"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="年龄:不详" />
+
+        <TextView
+            android:id="@+id/doctor_tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/doctor_tv_age"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_age"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_age"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:text="地区:不详" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_nick_name"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_nick_name"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:text="昵称："/>
+
+        <TextView
+            android:id="@+id/doctor_tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/doctor_iv_head_background"
+            app:layout_constraintBottom_toTopOf="@id/doctor_tv_email"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="未设置"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_email"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_email"
+            android:text="邮箱:"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/doctor_tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/doctor_tv_nick_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/doctor_tv_born"
+            android:text="未设置"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_born"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_born"
+            android:text="出生:"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/doctor_tv_born"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/doctor_tv_email"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/doctor_tv_id_number"
+            android:text="未设置"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:padding="10dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_id_number"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_id_number"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:text="身份证号码："/>
+
+        <TextView
+            android:id="@+id/doctor_tv_id_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctor_tv_born"
+            app:layout_constraintBottom_toTopOf="@id/doctor_tv_career"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="未设置"/>
+
+        <TextView
+            android:id="@+id/doctor_tv_career"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/doctor_tv_id_number"
+            app:layout_constraintBottom_toTopOf="@id/doctor_tv_change_password"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:text="职业信息"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/doctor_tv_career"
+            app:layout_constraintBottom_toBottomOf="@id/doctor_tv_career"
+            app:layout_constraintDimensionRatio="1:1"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:background="@mipmap/forward"/>
+
+        <TextView
+            android:id="@+id/doctor_tv_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctor_tv_career"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:text="修改密码"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
