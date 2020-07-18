@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -51,7 +50,6 @@ import com.zhengzhiqiang.healthmanagement.Adapter.KnowledgeRecyclerAdapter;
 import com.zhengzhiqiang.healthmanagement.CustomView.RoundImageView;
 import com.zhengzhiqiang.healthmanagement.DoctorActivity.CareerInformationActivity;
 import com.zhengzhiqiang.healthmanagement.Entity.Doctor;
-import com.zhengzhiqiang.healthmanagement.Entity.HealthRecord;
 import com.zhengzhiqiang.healthmanagement.Entity.IllnessHistory;
 import com.zhengzhiqiang.healthmanagement.Entity.RegisterForm;
 import com.zhengzhiqiang.healthmanagement.Entity.News;
@@ -72,7 +70,6 @@ import com.zhengzhiqiang.healthmanagement.Utils.PhotoUtils;
 import java.io.IOException;
 import java.io.Serializable;
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -488,6 +485,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    /**
+     * 初始化咨询社区页
+     */
     private void initCommunityRecyclerView(){
         communityRecyclerView = pageCommunity.findViewById(R.id.recycler_stickers);
         communityRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -646,6 +646,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    /**
+     * 刷新患者个人中心页
+     */
     private void refreshPersonalInformation(){
 
         HttpUtils.getUserInformation(MyApplication.IDENTITY_TYPE, new Callback() {
@@ -865,6 +868,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    /**
+     * 刷新医生个人信息
+     */
     private void refreshDoctorPersonalInformation(){
 
         HttpUtils.getUserInformation(MyApplication.IDENTITY_TYPE, new Callback() {
@@ -941,6 +947,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    /**
+     * 刷新个人中心页
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

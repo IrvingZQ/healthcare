@@ -9,5 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:textSize="15sp"
         android:text="消息页"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
